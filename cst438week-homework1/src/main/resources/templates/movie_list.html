@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html  xmlns:th = "wwww.thymeleaf.org">
+<head>
+<title>CST438 Homework 1</title>
+</head>
+<body>
+	<h2>Movies Rating</h2>
+	<br/>
+	<table>
+		<tr>
+			<th>Name of Rater</th>
+			<th>Movie Title</th>
+			<th>Rating (1 to 5)</th>
+			<th>Date/Time of Posting</th>
+		</tr>
+		<tr th:each="movieRatings : ${movieRatings}">
+			<td th:text = "${movieRatings.name}"></td>
+			<td th:text = "${movieRatings.movieName}"></td>
+			<td th:text = "${movieRatings.rating}"></td>
+			<td th:text = "${movieRatings.time}"></td>
+		</tr>
+	</table>
+	<br/>
+	<a href="/movies/new">Add a new movie</a>
+
+</body>
+</html>
